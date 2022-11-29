@@ -14,7 +14,7 @@ class ImplementationTest extends TestCase
 {
     const JS_FUNCTION_CREATE_DEPRECATION_PATTERN = '/^Nesk\\\\Rialto\\\\Data\\\\JsFunction::create\(\)/';
 
-    public function setUp(): void
+    protected function setUp(): void
     {
         parent::setUp();
 
@@ -24,7 +24,7 @@ class ImplementationTest extends TestCase
         $this->fs = $this->canPopulateProperty('fs') ? new FsWithProcessDelegation : null;
     }
 
-    public function tearDown(): void
+    protected function tearDown(): void
     {
         $this->fs = null;
     }
@@ -435,6 +435,8 @@ class ImplementationTest extends TestCase
 
         $processKilled = posix_kill($newNodeProcesses[0], SIGKILL);
         $this->assertTrue($processKilled);
+
+        \usleep(10000); # To make sure the process had enough time to be killed.
 
         $this->expectException(\Nesk\Rialto\Exceptions\ProcessUnexpectedlyTerminatedException::class);
         $this->expectExceptionMessage('The process has been unexpectedly terminated.');
