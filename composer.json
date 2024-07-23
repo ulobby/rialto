@@ -21,12 +21,12 @@
         "php": ">=7.1",
         "clue/socket-raw": "^1.2",
         "psr/log": "^2.0",
-        "symfony/process": "^3.3|^4.0|^5.0|^6.0"
+        "symfony/process": "^5.0|^6.0|^7.0"
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": ">=0.6 <1.0",
         "monolog/monolog": "^2.0",
-        "phpunit/phpunit": "^6.5|^7.0|^8.0"
+        "phpunit/phpunit": "^7.0|^8.0"
     },
     "suggest": {
         "ext-weakref": "Required to run all the tests"
