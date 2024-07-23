@@ -20,8 +20,7 @@
     "require": {
         "php": ">=7.1",
         "clue/socket-raw": "^1.2",
-        "psr/log": "^2.0",
-        "symfony/process": "^5.0|^6.0|^7.0"
+        "psr/log": "^2.0"
     },
     "require-dev": {
         "codedungeon/phpunit-result-printer": ">=0.6 <1.0",
